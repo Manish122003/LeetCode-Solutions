@@ -1,0 +1,28 @@
+# Insertion sort
+
+arr = [22,90,11,25,34,12]
+print(arr)
+
+for i in range(1,len(arr)):
+    m = i
+    while (arr[m]<arr[m-1]) and (m>=1):
+        arr[m],arr[m-1] = arr[m-1],arr[m]
+        m-=1
+    print(arr)
+print(arr)
+
+
+
+# Selection sort
+
+arr = [22,90,11,25,34,12]
+
+print(arr)
+n = len(arr)
+for i in range(n-1):
+    min_index = i
+    for j in range(i,n):
+        if arr[j] < arr[min_index]:
+            min_index = j
+    arr[i],arr[min_index] = arr[min_index],arr[i]
+print(arr)
